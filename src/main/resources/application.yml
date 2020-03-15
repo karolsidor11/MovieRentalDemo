@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: MovieRentalDemo
+  profiles:
+    active: dev
+  jpa:
+    show-sql: true
+    hibernate:
+        ddl-auto: update
+  h2:
+    console:
+      path: /h2
+      enabled: true
+
+graphql:
+  servlet:
+    enabled: true
+    mapping: /graphql
