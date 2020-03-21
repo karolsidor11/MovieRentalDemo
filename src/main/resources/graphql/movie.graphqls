@@ -1,0 +1,11 @@
+type Movie{
+    id:ID,
+    title:String,
+    author:String,
+    year:String,
+    type:String,
+    evaluation: Int
+}
+type Query{
+    findMovieById(id:Int):Movie
+}
