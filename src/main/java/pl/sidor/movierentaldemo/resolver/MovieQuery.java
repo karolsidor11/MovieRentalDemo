@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 import pl.sidor.movierentaldemo.model.Movie;
 import pl.sidor.movierentaldemo.service.MovieService;
 
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class MovieQuery implements GraphQLQueryResolver {
@@ -14,5 +16,13 @@ public class MovieQuery implements GraphQLQueryResolver {
 
     public Movie findMovieById(Long id) {
         return movieService.findMovieById(id);
+    }
+
+    public Movie findByTitle(String title) {
+        return movieService.findByTitle(title);
+    }
+
+    public List<Movie> findAllMovies() {
+        return movieService.findAllMovies();
     }
 }

@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Data
-@Builder
+@Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Movie {
