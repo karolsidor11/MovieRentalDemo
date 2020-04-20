@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Objects;
 
 @Entity
 @Data
@@ -34,17 +33,4 @@ public class Movie {
 
     @Column(name = "Evaluation")
     private double evaluation;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Movie movie = (Movie) o;
-        return Double.compare(movie.evaluation, evaluation) == 0 && Objects.equals(title, movie.title) && Objects.equals(author, movie.author) && Objects.equals(year, movie.year) && Objects.equals(type, movie.type);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(title, author, year, type, evaluation);
-    }
 }
