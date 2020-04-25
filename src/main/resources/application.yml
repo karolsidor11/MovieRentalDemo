@@ -1,7 +1,8 @@
 server:
   port: 8081
-
 spring:
+  banner:
+    location: classpath:banner.txt
   application:
     name: MovieRentalDemo
   profiles:
@@ -9,13 +10,20 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-        ddl-auto: update
+        ddl-auto: create-drop
   h2:
     console:
       path: /h2
       enabled: true
+  datasource:
+    url: jdbc:h2:~/test
+    data-username: sa
+    data-password:
+    driver-class-name: org.h2.Driver
+    data: classpath:sql/movie.sql
 
 graphql:
   servlet:
     enabled: true
     mapping: /graphql
+
