@@ -1,7 +1,13 @@
+input MovieInput{
+    title:String,
+    distributor:String,
+    year:String,
+    type:String
+}
 type Movie{
     id:ID,
     title:String,
-    author:String,
+    distributor:String,
     year:String,
     type:String,
     evaluation: Int
@@ -13,7 +19,7 @@ type Query{
 }
 
 type Mutation{
-    createMovie(Movie:String):Movie,
-    updateMovie(Movie:String):Movie,
+    createMovie(input:MovieInput):Movie,
+    updateMovie(input:MovieInput):Movie,
     deleteMovieById(id:Int):Boolean
 }

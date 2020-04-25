@@ -12,7 +12,7 @@ public class MoveData {
                 .title("Titanic")
                 .year(new Date())
                 .type("Drama")
-                .author("Jonny Gose")
+                .distributor("Jonny Gose")
                 .evaluation(4.8)
                 .build();
     }

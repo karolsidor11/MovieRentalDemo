@@ -37,7 +37,7 @@ class MovieMutationTest extends Specification {
         Movie movie = MoveData.getMovie(id)
         Movie currentMovie = movie.toBuilder()
                 .title("MadeMax")
-                .author("Jonny Waker")
+                .distributor("Jonny Waker")
                 .build();
 
         when:

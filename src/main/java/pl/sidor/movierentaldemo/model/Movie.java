@@ -22,8 +22,8 @@ public class Movie {
     @Column(name = "Title")
     private String title;
 
-    @Column(name = "Author")
-    private String author;
+    @Column(name = "Distributor")
+    private String distributor;
 
     @Column(name = "Year")
     private Date year;

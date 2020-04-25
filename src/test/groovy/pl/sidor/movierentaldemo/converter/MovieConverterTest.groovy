@@ -16,7 +16,7 @@ class MovieConverterTest extends Specification {
         then:
         result!=null
         result.id==1
-        result.author=="Jan Kowalski"
+        result.distributor=="Jan Kowalski"
         result.evaluation == 4.8
     }
 
@@ -24,7 +24,7 @@ class MovieConverterTest extends Specification {
         return Movie.builder()
                 .id(1)
                 .title("Titanic")
-                .author("Jan Nowak")
+                .distributor("Jan Nowak")
                 .evaluation(5.0)
                 .type("Dramat")
                 .build()
@@ -33,7 +33,7 @@ class MovieConverterTest extends Specification {
     private static Movie getNewMovie() {
         return Movie.builder()
                 .title("Titanic")
-                .author("Jan Kowalski")
+                .distributor("Jan Kowalski")
                 .evaluation(4.8)
                 .type("Dramat-romatyczny")
                 .build()

@@ -22,7 +22,7 @@ class MovieServiceImplTest extends Specification {
         then:
         result != null
         result.id == 1L
-        result.author == "Jan Nowak"
+        result.distributor == "Jan Nowak"
         result.evaluation == 5.0
     }
 
@@ -37,7 +37,7 @@ class MovieServiceImplTest extends Specification {
         then:
         result != null
         result.id == null
-        result.author == null
+        result.distributor == null
     }
 
     @Unroll
@@ -99,7 +99,7 @@ class MovieServiceImplTest extends Specification {
         then:
         result != null
         result.getEvaluation() == 4.8
-        result.getAuthor() == "Jan Kowalski"
+        result.getDistributor() == "Jan Kowalski"
 
     }
 
@@ -123,7 +123,7 @@ class MovieServiceImplTest extends Specification {
         return Movie.builder()
                 .id(1)
                 .title("Titanic")
-                .author("Jan Nowak")
+                .distributor("Jan Nowak")
                 .evaluation(5.0)
                 .type("Dramat")
                 .build()
@@ -133,7 +133,7 @@ class MovieServiceImplTest extends Specification {
         return Movie.builder()
                 .id(1)
                 .title("Titanic")
-                .author("Jan Kowalski")
+                .distributor("Jan Kowalski")
                 .evaluation(4.8)
                 .type("Dramat")
                 .build()

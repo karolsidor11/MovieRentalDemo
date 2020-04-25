@@ -7,7 +7,7 @@ public class MovieConverter {
     public static Movie convertMovie(Movie oldMovie, Movie newMovie) {
         return oldMovie.toBuilder()
                 .title(newMovie.getTitle())
-                .author(newMovie.getAuthor())
+                .distributor(newMovie.getDistributor())
                 .type(newMovie.getType())
                 .evaluation(newMovie.getEvaluation())
                 .year(newMovie.getYear())
