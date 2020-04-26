@@ -1,6 +1,6 @@
 package pl.sidor.movierentaldemo.utils;
 
-import pl.sidor.movierentaldemo.model.Movie;
+import pl.sidor.movierentaldemo.entity.model.Movie;
 
 import java.util.Date;
 
@@ -8,7 +8,6 @@ public class MoveData {
 
     public static Movie getMovie(Long id) {
         return Movie.builder()
-                .id(id)
                 .title("Titanic")
                 .year(new Date())
                 .type("Drama")

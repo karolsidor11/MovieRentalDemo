@@ -1,6 +1,6 @@
 package pl.sidor.movierentaldemo.converter;
 
-import pl.sidor.movierentaldemo.model.Movie;
+import pl.sidor.movierentaldemo.entity.model.Movie;
 
 public class MovieConverter {
 

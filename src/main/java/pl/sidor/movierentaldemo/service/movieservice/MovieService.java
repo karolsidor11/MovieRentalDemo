@@ -1,6 +1,6 @@
-package pl.sidor.movierentaldemo.service;
+package pl.sidor.movierentaldemo.service.movieservice;
 
-import pl.sidor.movierentaldemo.model.Movie;
+import pl.sidor.movierentaldemo.entity.model.Movie;
 
 import java.util.List;
 

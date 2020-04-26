@@ -1,0 +1,15 @@
+type Query{
+    findMovieById(id:Int):Movie,
+    findByTitle(title:String):Movie,
+    findAllMovies:[Movie],
+    findClientById(id:Int):Client,
+    findClientByNameAndLastName(name:String, lastName:String):Client
+}
+
+type Mutation{
+    createMovie(input:MovieInput):Movie,
+    updateMovie(input:MovieInput):Movie,
+    deleteMovieById(id:Int):Boolean,
+    createClient(input:ClientInput):Client
+    deleteClient(id:Int):Boolean
+}

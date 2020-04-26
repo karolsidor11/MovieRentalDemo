@@ -1,7 +1,8 @@
 package pl.sidor.movierentaldemo.service
 
-import pl.sidor.movierentaldemo.model.Movie
+import pl.sidor.movierentaldemo.entity.model.Movie
 import pl.sidor.movierentaldemo.repository.MovieRepository
+import pl.sidor.movierentaldemo.service.movieservice.MovieServiceImpl
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -21,7 +22,6 @@ class MovieServiceImplTest extends Specification {
 
         then:
         result != null
-        result.id == 1L
         result.distributor == "Jan Nowak"
         result.evaluation == 5.0
     }
@@ -82,7 +82,6 @@ class MovieServiceImplTest extends Specification {
 
         then:
         result != null
-        result.getId() == 1L
         result.getTitle() == "Titanic"
         result.getEvaluation() == 5.0
     }
@@ -121,7 +120,6 @@ class MovieServiceImplTest extends Specification {
 
     private static Movie getMovie() {
         return Movie.builder()
-                .id(1)
                 .title("Titanic")
                 .distributor("Jan Nowak")
                 .evaluation(5.0)
@@ -131,7 +129,6 @@ class MovieServiceImplTest extends Specification {
 
     private static Movie getNewsetMovie() {
         return Movie.builder()
-                .id(1)
                 .title("Titanic")
                 .distributor("Jan Kowalski")
                 .evaluation(4.8)

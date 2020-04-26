@@ -1,10 +1,10 @@
-package pl.sidor.movierentaldemo.resolver;
+package pl.sidor.movierentaldemo.resolver.movie;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pl.sidor.movierentaldemo.model.Movie;
-import pl.sidor.movierentaldemo.service.MovieService;
+import pl.sidor.movierentaldemo.entity.model.Movie;
+import pl.sidor.movierentaldemo.service.movieservice.MovieService;
 
 @Component
 @RequiredArgsConstructor

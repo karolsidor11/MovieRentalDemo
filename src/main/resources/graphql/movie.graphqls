@@ -1,9 +1,3 @@
-input MovieInput{
-    title:String,
-    distributor:String,
-    year:String,
-    type:String
-}
 type Movie{
     id:ID,
     title:String,
@@ -12,14 +6,12 @@ type Movie{
     type:String,
     evaluation: Int
 }
-type Query{
-    findMovieById(id:Int):Movie,
-    findByTitle(title:String):Movie,
-    findAllMovies:[Movie]
+
+input MovieInput{
+    title:String,
+    distributor:String,
+    year:String,
+    type:String
 }
 
-type Mutation{
-    createMovie(input:MovieInput):Movie,
-    updateMovie(input:MovieInput):Movie,
-    deleteMovieById(id:Int):Boolean
-}
+
