@@ -1,4 +1,4 @@
-package pl.sidor.movierentaldemo.service
+package pl.sidor.movierentaldemo.service.movieservice
 
 import pl.sidor.movierentaldemo.entity.model.Movie
 import pl.sidor.movierentaldemo.repository.MovieRepository

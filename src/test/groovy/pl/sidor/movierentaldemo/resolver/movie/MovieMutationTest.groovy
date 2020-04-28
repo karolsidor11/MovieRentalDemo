@@ -1,4 +1,4 @@
-package pl.sidor.movierentaldemo.resolver
+package pl.sidor.movierentaldemo.resolver.movie
 
 import pl.sidor.movierentaldemo.entity.model.Movie
 import pl.sidor.movierentaldemo.resolver.movie.MovieMutation
