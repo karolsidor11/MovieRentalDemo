@@ -1,6 +1,6 @@
 package pl.sidor.movierentaldemo.converter
 
-import pl.sidor.movierentaldemo.model.Movie
+import pl.sidor.movierentaldemo.entity.model.Movie
 import spock.lang.Specification
 
 class MovieConverterTest extends Specification {
@@ -15,14 +15,12 @@ class MovieConverterTest extends Specification {
 
         then:
         result!=null
-        result.id==1
         result.distributor=="Jan Kowalski"
         result.evaluation == 4.8
     }
 
     private static Movie getOldMovie() {
         return Movie.builder()
-                .id(1)
                 .title("Titanic")
                 .distributor("Jan Nowak")
                 .evaluation(5.0)

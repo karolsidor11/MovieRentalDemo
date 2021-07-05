@@ -1,7 +1,8 @@
-package pl.sidor.movierentaldemo.resolver
+package pl.sidor.movierentaldemo.resolver.movie
 
-import pl.sidor.movierentaldemo.model.Movie
-import pl.sidor.movierentaldemo.service.MovieServiceImpl
+import pl.sidor.movierentaldemo.entity.model.Movie
+import pl.sidor.movierentaldemo.resolver.movie.MovieMutation
+import pl.sidor.movierentaldemo.service.movieservice.MovieServiceImpl
 import pl.sidor.movierentaldemo.utils.MoveData
 import spock.lang.Shared
 import spock.lang.Specification
@@ -28,7 +29,6 @@ class MovieMutationTest extends Specification {
         then:
         noExceptionThrown()
         result != null
-        result.id == id
         result.title == "Titanic"
     }
 
@@ -47,7 +47,6 @@ class MovieMutationTest extends Specification {
         then:
         noExceptionThrown()
         result != null
-        result.id == id
         result.title == currentMovie.title
     }
 

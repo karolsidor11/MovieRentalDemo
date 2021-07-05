@@ -1,10 +1,11 @@
 package pl.sidor.movierentaldemo.converter;
 
-import pl.sidor.movierentaldemo.model.Movie;
+import org.jetbrains.annotations.NotNull;
+import pl.sidor.movierentaldemo.entity.model.Movie;
 
 public class MovieConverter {
 
-    public static Movie convertMovie(Movie oldMovie, Movie newMovie) {
+    public static Movie convertMovie(@NotNull Movie oldMovie, @NotNull Movie newMovie) {
         return oldMovie.toBuilder()
                 .title(newMovie.getTitle())
                 .distributor(newMovie.getDistributor())

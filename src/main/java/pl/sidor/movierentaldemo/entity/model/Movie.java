@@ -1,11 +1,10 @@
-package pl.sidor.movierentaldemo.model;
+package pl.sidor.movierentaldemo.entity.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import pl.sidor.movierentaldemo.entity.base.BaseEntity;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
 import java.util.Date;
 
 @Entity
@@ -13,11 +12,10 @@ import java.util.Date;
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Movie {
+@EqualsAndHashCode(callSuper = true)
+public class Movie extends BaseEntity<Long> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private static final long serialVersionUID = 2820627879720435255L;
 
     @Column(name = "Title")
     private String title;

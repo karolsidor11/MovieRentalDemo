@@ -1,4 +1,4 @@
-INSERT INTO MOVIE VALUES (1, 'Walt Disney Studios',5, 'Avengers: Koniec gry', 'Fantasy', '2016-02-03 00:00:00.0' );
+INSERT INTO MOVIE VALUES (1,'Walt Disney Studios',5, 'Avengers: Koniec gry', 'Fantasy', '2016-02-03 00:00:00.0' );
 INSERT INTO MOVIE VALUES (2, '20th Century Fox',4.9, 'Avatar', 'Fantasy', '2018-02-03 00:00:00.0');
 INSERT INTO MOVIE VALUES (3, '20th Century Fox',4.8, 'Titanic', 'Dramat', '2000-02-05 00:00:00.0');
 INSERT INTO MOVIE VALUES (4, 'Universal Studios',4.5, 'Jurassic World', 'Dramat', '2002-02-03 00:00:00.0');

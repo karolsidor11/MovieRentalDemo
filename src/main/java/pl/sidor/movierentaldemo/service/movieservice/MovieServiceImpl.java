@@ -1,10 +1,10 @@
-package pl.sidor.movierentaldemo.service;
+package pl.sidor.movierentaldemo.service.movieservice;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pl.sidor.movierentaldemo.converter.MovieConverter;
-import pl.sidor.movierentaldemo.model.Movie;
+import pl.sidor.movierentaldemo.entity.model.Movie;
 import pl.sidor.movierentaldemo.repository.MovieRepository;
 
 import java.util.ArrayList;
