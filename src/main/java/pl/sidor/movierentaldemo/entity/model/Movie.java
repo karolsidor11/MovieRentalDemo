@@ -1,9 +1,6 @@
 package pl.sidor.movierentaldemo.entity.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import pl.sidor.movierentaldemo.entity.base.BaseEntity;
 
 import javax.persistence.Column;
@@ -15,7 +12,10 @@ import java.util.Date;
 @Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
-public class Movie extends BaseEntity {
+@EqualsAndHashCode(callSuper = true)
+public class Movie extends BaseEntity<Long> {
+
+    private static final long serialVersionUID = 2820627879720435255L;
 
     @Column(name = "Title")
     private String title;

@@ -1,4 +1,4 @@
-package pl.sidor.movierentaldemo.entity.model;
+package pl.sidor.movierentaldemo.entity.embedded;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +13,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class Addres {
+public class Address {
 
     @Column(name = "Country")
     private String country;

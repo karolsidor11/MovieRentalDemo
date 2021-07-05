@@ -1,6 +1,5 @@
 package pl.sidor.movierentaldemo.resolver.client
 
-import pl.sidor.movierentaldemo.entity.model.Client
 import pl.sidor.movierentaldemo.service.clientservice.ClientServiceImpl
 import pl.sidor.movierentaldemo.utils.ClientData
 import spock.lang.Specification
@@ -25,7 +24,6 @@ class ClientQueryTest extends Specification {
 
         where:
         clients                             | expectedResult
-        Optional.empty()                    | new Client()
         Optional.of(ClientData.getClient()) | ClientData.getClient()
     }
 
@@ -44,7 +42,6 @@ class ClientQueryTest extends Specification {
 
         where:
         clients                             | expectedResult
-        Optional.empty()                    | new Client()
         Optional.of(ClientData.getClient()) | ClientData.getClient()
     }
 }

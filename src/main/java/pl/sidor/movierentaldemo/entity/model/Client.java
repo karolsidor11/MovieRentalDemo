@@ -1,10 +1,8 @@
 package pl.sidor.movierentaldemo.entity.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import pl.sidor.movierentaldemo.entity.base.BaseEntity;
+import pl.sidor.movierentaldemo.entity.embedded.Address;
 
 import javax.persistence.*;
 import java.util.List;
@@ -14,7 +12,10 @@ import java.util.List;
 @Builder(toBuilder = true)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Client extends BaseEntity {
+@EqualsAndHashCode(callSuper = false)
+public class Client extends BaseEntity<Long> {
+
+    private static final long serialVersionUID = -3378558174851808278L;
 
     @Column(name = "Name")
     private String name;
@@ -26,7 +27,7 @@ public class Client extends BaseEntity {
     private int phoneNumber;
 
     @Embedded
-    private Addres adres;
+    private Address address;
 
     @OneToMany
     private List<Movie> movieList;
